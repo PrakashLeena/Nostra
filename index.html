@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- creating offer bar -->
+    <div id="offerbar" class="text-white text-center p-3" style="background-color: #1E232D;">
+        <p id="offerbar__content" class="inline text-2xl ">Sign Up and <span class="font-bold">20% OFF</span> for your
+            first Order</p>
+        <button id="close__icon" class="inline text-xl ml-10">✖️</button>
+    </div>
+
+
+    <!-- creating nav bar -->
+    <header id="navbar" class="flex justify-between items-center p-4 sticky z-10 top-0 bg-white">
+        <div id="navbar__s1" class="flex">
+            <h1 id="navbar__s1__title" class="text-3xl font-extrabold">Nostra</h1>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav id="navbar__s2" class="text-xl desktop-nav">
+            <ul class="flex gap-x-8">
+                <button><a href="index.html" class="hover:text-gray-600 transition-colors hover:underline font-bold">Home</a></button>
+                <button id="navbar__newarrival" class="hover:text-gray-600 transition-colors hover:underline">New Arrival</button>
+                <button id="navbar__mostwanted" class="hover:text-gray-600 transition-colors hover:underline">Most Wanted</button>
+                <button><a href="collections.html" class="hover:text-gray-600 transition-colors hover:underline">Collections</a></button>
+                <button><a href="contact.html" class="hover:text-gray-600 transition-colors hover:underline">Contact Us</a></button>
+            </ul>
+        </nav>
+
+        <!-- Mobile Hamburger Menu -->
+        <div id="mobile-menu-toggle" class="mobile-nav">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Side Menu -->
+    <div id="mobile-side-menu" class="mobile-side-menu">
+        <div class="mobile-menu-content">
+            <button class="close-menu">&times;</button>
+            <ul class="mobile-menu-list">
+                <li><a href="index.html" class="mobile-menu-item active">Home</a></li>
+                <li><button id="mobile-navbar__newarrival" class="mobile-menu-item">New Arrival</button></li>
+                <li><button id="mobile-navbar__mostwanted" class="mobile-menu-item">Most Wanted</button></li>
+                <li><a href="collections.html" class="mobile-menu-item">Collections</a></li>
+                <li><a href="contact.html" class="mobile-menu-item">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- creating image slider -->
+    <div id="imageslider" class="items-center">
+        <div id="textcontainer">
+            <p id="imagesliderpara1" class="text-7xl p-4 text-center font-bold absolute text-white"
+                style="margin-top: 18%; z-index: 2; margin-left: 18%;">Level up your style with our</p>
+            <p id="imagesliderpara2" class="items-center font-bold text-xl absolute text-white"
+                style="margin-top: 25%; margin-left: 45%; z-index: 2;">Summer Collections</p>
+            <button id="sliderbutton1" class="text-8xl absolute text-white"
+                style="margin-left: 7%; z-index: 2; margin-top: 20%;" onclick="prevImage()"> ⮜ </button>
+            <button id="sliderbutton2" class="text-8xl absolute text-white"
+                style="margin-left: 86%; z-index: 2; margin-top: 20%;" onclick="nextImage()">⮞</button>
+        </div>
+        <br>
+        <button id="shopnowbutton" class="absolute p-3 bg-white"
+            style="margin-left: 47%; margin-top: 20%; z-index: 2;">Shop Now →</button>
+
+        <div id="imagecontainer">
+            <div id="img1"
+                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/img3.jpg'); 
+            background-size: cover; background-position: center; width: 95%; height: 500px; margin-left: 2.5%; border-radius:10px;">
+            </div>
+
+
+            <div id="img2" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/img2.jpg'); 
+            background-size: cover; background-position: center; width: 100%; height: 500px; display: none;">
+            </div>
+
+
+            <div id="img3" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/img1.jpg'); 
+            background-size: cover; background-position: center; width: 100%; height: 500px; display: none;">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- creating brand logos -->
+    <p id="brandlogo__title" class="p-4 text-3xl font-bold" style="margin-top: 5%;">Brands</p>
+
+    <div id="brandlogo__container" class="flex justify-between">
+        <div id="logo1">
+            <img id="puma" src="./images/puma.jpg" class="w-20 h-20">
+            <p id="pumatext" class="ml-3 text-2xl">Puma</p>
+        </div>
+
+        <div id="logo2">
+            <img id="adidas" src="./images/adidas.jpg" class="w-20 h-20">
+            <p id="adidastext" class=" text-2xl">Adidas</p>
+        </div>
+
+        <div id="logo3">
+            <img id="simple" src="./images/simple.jpg" class="w-20 h-20">
+            <p id="simpletext" class="ml-1 text-2xl">Simple</p>
+        </div>
+
+        <div id="logo4">
+            <img id="leaves" src="./images/leaves.jpg" class="w-20 h-20">
+            <p id="leavestext" class="ml-2 text-2xl">Leaves</p>
+        </div>
+
+        <div id="logo5">
+            <img id="behance" src="./images/behance.jpg" class="w-20 h-20">
+            <p id="behancetext" class="text-2xl">Behance</p>
+        </div>
+
+        <div id="logo6">
+            <img id="twitch" src="./images/twitch.jpg" class="w-20 h-20">
+            <p id="twitchtext" class="ml-2 text-2xl">Twitch</p>
+        </div>
+
+        <div id="logo7">
+            <img id="nike" src="./images/nike.jpg" class="w-20 h-20">
+            <p id="niketext" class="ml-1 text-2xl">Nike</p>
+        </div>
+    </div>
+
+    <!-- creating customer site -->
+
+    <div id="customer__title" class="flex">
+        <p id="customer__para1" class="p-5 mt-10 text-3xl font-bold">We Provided Best <br>Customer Experiences</p>
+        <p id="customer__para2" class="p-5 mt-20 text-xl" style="margin-left: 35%;">|| We ensure that our customer have
+            the best shopping experience</p>
+    </div>
+
+    <!-- creating boxes -->
+
+    <div id="boxes" class="flex gap-5 p-5 ">
+        <div id="box1" class="p-5 bg-gray-200">
+            <p id="box1img" class="text-5xl">☑</p>
+            <p id="box1para1" class="font-bold">Original Products</p>
+            <p id="box1para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste magnam dolorem</p>
+        </div>
+
+        <div id="box2" class="p-5 bg-gray-200">
+            <p id="box1img" class="text-5xl">☺</p>
+            <p id="box2para1" class="font-bold">Satisfaction Guarantee</p>
+            <p id="box2para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste magnam dolorem</p>
+        </div>
+
+        <div id="box3" class="p-5 bg-gray-200">
+            <p id="box1img" class="text-5xl">🛍</p>
+            <p id="box3para1" class="font-bold">New Arrival Everyday</p>
+            <p id="box3para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste magnam dolorem</p>
+        </div>
+
+        <div id="box4" class="p-5 bg-gray-200">
+            <p id="box1img" class="text-5xl">⛟</p>
+            <p id="box4para1" class="font-bold">Fast & Free Shipping</p>
+            <p id="box4para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste magnam dolorem</p>
+        </div>
+    </div>
+
+    <!-- creating new arrival images -->
+    <p id="newarrival-section" class="p-5 mt-10 text-2xl font-extrabold">New Arrival</p>
+    <div id="Newarrival__imagecontainer" class="flex justify-between mr-7">
+
+        <div id="newarrival__image1"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt1.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px;">
+            <button id="newarrival__shopnow--button1" class="bg-white p-3 text-xl rounded-md"
+                style="margin-left: 25%; margin-top: 50%;">Shop Now→</button>
+        </div>
+
+        <div id="newarrival__image2"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt2.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px;">
+            <button id="newarrival__shopnow--button1" class="bg-white p-3 text-xl rounded-md"
+                style="margin-left: 25%; margin-top: 50%;">Shop Now→</button>
+        </div>
+
+        <div id="newarrival__image3"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt3.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px;">
+            <button id="newarrival__shopnow--button1" class="bg-white p-3 text-xl rounded-md"
+                style="margin-left: 25%; margin-top: 50%;">Shop Now→</button>
+        </div>
+
+        <div id="newarrival__image4"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt4.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px;">
+            <button id="newarrival__shopnow--button1" class="bg-white p-3 text-xl rounded-md"
+                style="margin-left: 25%; margin-top: 50%;">Shop Now→</button>
+        </div>
+    </div>
+
+
+    <!-- creating most wanted site -->
+
+    <p id="mostwanted-section" class="p-5 mt-10 text-2xl font-extrabold">Most Wanted</p>
+    <div id="mostwanted__imagecontainer" class="flex justify-between mr-7">
+
+        <div id="mostwanted__image1"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt5.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px; position: relative;">
+            <p class="text-3xl p-1 bg-red-600 inline text-white rounded-md ">Sale</p>
+            <span style="position: absolute; bottom: 10px; right: 10px;">
+                <button id="addtocard1" class="hart1" style="font-size: xx-large;">♡</button>
+            </span>
+        </div>
+
+        <div id="mostwanted__image2"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt2.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px; position: relative;">
+            <p class="text-3xl p-1 bg-red-600 inline text-white rounded-md ">Sale</p>
+            <span style="position: absolute; bottom: 10px; right: 10px;">
+                <button id="addtocard2" class="hart2" style="font-size: xx-large;">♡</button>
+            </span>
+        </div>
+
+        <div id="mostwanted__image3"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt3.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px;position: relative;">
+            <p class="text-3xl p-1 bg-red-600 inline text-white rounded-md ">Sale</p>
+            <span style="position: absolute; bottom: 10px; right: 10px;">
+                <button id="addtocard3" class="hart3" style="font-size: xx-large;">♡</button>
+            </span>
+        </div>
+
+        <div id="mostwanted__image4"
+            style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./images/shirt4.jpg'); 
+            background-size: cover; background-position: center; width: 20%; height: 300px; margin-left: 2.5%; border-radius:10px; position: relative;">
+            <p class="text-3xl p-1 bg-red-600 inline text-white rounded-md ">Sale</p>
+            <span style="position: absolute; bottom: 10px; right: 10px;">
+                <button id="addtocard4" class="hart4" style="font-size: xx-large;">♡</button>
+            </span>
+        </div>
+    </div>
+
+
+
+    <!-- creating gray box -->
+    <div id="graybox" class="p-10 mt-10 flex bg-gray-900" style="width: 98% ;align-items: center; margin-left: 1%;">
+        <div id="grayboximage">
+            <img src="./images/graybox.jpg">
+        </div>
+
+        <div id="grayboxpara" class="mt-10 ">
+            <p id="grayboxpara1" class="p-2 ml-10 mt-2 text-5xl font-extrabold text-white">Limited Offer</p>
+            <p id="grayboxpara2" class=" ml-12 text-3xl font-extrabold text-white">35% OFF on this for the first 30
+                Customers</p>
+            <button id="graybox__shopnow--button" class="ml-12 mt-2 p-4 text-xl bg-white rounded-md">Shop Now→</button>
+        </div>
+
+    </div>
+
+    <!-- creating news bar -->
+
+    <div id="newsbar" class="text-center p-10 mt-20">
+        <div id="newsbar__para">
+            <p id="newsbar__para1" class="text-5xl font-extrabold p-4">Join our News Letter</p>
+            <p id="newsbar__para2" class="text-4xl">Signup for our email newspaper to get exclusive discounts, updates,
+                and more</p>
+        </div>
+
+        <div id="newsbar__searchbar" class="p-4">
+            <input style="border: solid black 3px ;width: 90%; height: 40px;">
+        </div>
+
+        <button id="newsbar__button" class="p-3 bg-gray-900 text-white text-xl rounded-md">Subscribe→</button>
+    </div>
+
+
+    <!-- creating end bar -->
+
+    <div id="endbar" class="bg-gray-900 text-white p-4">
+        <p id="endbar__para1" class="text-5xl font-extrabold p-4">Nostra</p>
+        <p id="endbar__para2" class="text-3xl p-4">The Standard chunk of Lorem ipsum used since the 1500s is reprodused
+            below for those
+            interest</p>
+        <div id="socialmedia__icons" class="flex gap-x-10 p-4">
+            <p id="insta"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    viewBox="0 0 448 512">
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.9 224.1 370.9 339 319.6 339 255.9 287.7 141 224.1 141zm0 186c-39.3 0-71.1-31.8-71.1-71.1S184.8 185.9 224.1 185.9s71.1 31.8 71.1 71.1-31.8 71.1-71.1 71.1zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.7-9.9-67.3-36.2-93.5S383.1 32 347.4 30.3c-35.7-1.7-142.8-1.7-178.5 0-35.7 1.7-67.3 9.9-93.5 36.2S32 128.9 30.3 164.6c-1.7 35.7-1.7 142.8 0 178.5 1.7 35.7 9.9 67.3 36.2 93.5s57.8 34.5 93.5 36.2c35.7 1.7 142.8 1.7 178.5 0 35.7-1.7 67.3-9.9 93.5-36.2s34.5-57.8 36.2-93.5c1.7-35.7 1.7-142.8 0-178.5zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.3-9s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.6 102.9-9 132.3z" />
+                </svg>
+            </p>
+
+            <p id="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    viewBox="0 0 512 512">
+                    <path d="M459.4 151.7c.3 4.5.3 9 .3 13.6 0 138.7-105.6 298.5-298.5 298.5-59.5 0-114.7-17.2-161.1-47.1 
+  8.4 1 16.8 1.5 25.6 1.5 49.1 0 94.2-16.8 130.3-45-46.1-1-84.8-31.2-98.1-72.8 
+  6.5 1 13 1.6 19.8 1.6 9.4 0 18.7-1.3 27.5-3.6-48.1-9.7-84.3-52.1-84.3-103 
+  0-.5 0-1 0-1.5 14.3 7.9 30.7 12.7 48.1 13.3-28.3-18.9-46.8-51-46.8-87.4 
+  0-19.2 5.2-37 14.3-52.4 51.9 63.7 129.3 105.3 216.4 109.8-1.8-7.7-2.8-15.7-2.8-24 
+  0-57.4 46.5-103.9 103.9-103.9 29.9 0 56.9 12.7 75.9 33.1 
+  23.7-4.5 46-13.3 66-25.2-7.8 24.4-24.4 44.9-46 57.9 
+  21.1-2.4 41.5-8.1 60.3-16.2-14 20.8-31.6 39.2-51.9 53.8z" />
+                </svg>
+            </p>
+
+            <p id="fb"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    viewBox="0 0 320 512">
+                    <path
+                        d="M279.14 288l14.22-92.66h-88.91V127.59c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S293.09 0 262.17 0c-73.1 0-121.17 44.38-121.17 124.72V195.3H89.09V288h51.91v224h100.17V288z" />
+                </svg>
+            </p>
+
+        </div>
+
+        <p id="endbar__para3" class="p-4 text-4xl ">@ 2023 Nostra.com</p>
+    </div>
+
+ <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+    <!-- creating offer bar -->
+    <div id="offerbar" class="text-white text-center p-3" style="background-color: #1E232D;">
+        <p id="offerbar__content" class="inline text-2xl ">Sign Up and <span class="font-bold">20% OFF</span> for your
+            first Order</p>
+        <button id="close__icon" class="inline text-xl ml-10">✖️</button>
+    </div>
+
+
+    <!-- creating nav bar -->
+    <header id="navbar" class="flex justify-between items-center p-4">
+        <div id="navbar__s1" class="flex">
+            <h1 id="navbar__s1__title" class="text-3xl font-extrabold">Nostra</h1>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav id="navbar__s2" class="text-xl desktop-nav">
+            <ul class="flex gap-x-8">
+                <button><a href="index.html" class="hover:text-gray-600 transition-colors">Home</a></button>
+                <button id="navbar__newarrival" class="hover:text-gray-600 transition-colors hover:underline">New Arrival</button>
+                <button id="navbar__mostwanted" class="hover:text-gray-600 transition-colors hover:underline">Most Wanted</button>
+                <button><a href="collections.html" class="hover:text-gray-600 transition-colors hover:underline">Collections</a></button>
+                <button><a href="contact.html" class="hover:text-gray-600 transition-colors hover:underline font-bold">Contact Us</a></button>
+            </ul>
+        </nav>
+
+        <!-- Mobile Hamburger Menu -->
+        <div id="mobile-menu-toggle" class="mobile-nav">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Side Menu -->
+    <div id="mobile-side-menu" class="mobile-side-menu">
+        <div class="mobile-menu-content">
+            <button class="close-menu">&times;</button>
+            <ul class="mobile-menu-list">
+                <li><a href="index.html" class="mobile-menu-item">Home</a></li>
+                <li><button id="mobile-navbar__newarrival" class="mobile-menu-item">New Arrival</button></li>
+                <li><button id="mobile-navbar__mostwanted" class="mobile-menu-item">Most Wanted</button></li>
+                <li><a href="collections.html" class="mobile-menu-item">Collections</a></li>
+                <li><a href="contact.html" class="mobile-menu-item active">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- creating contact page -->
+    <section class="py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 grid-cols-1">
+                <div class="lg:mb-0 mb-10">
+                    <div class="group w-full h-full">
+                        <div class="relative h-full">
+                            <img src="https://pagedone.io/asset/uploads/1696488602.png" alt="ContactUs tailwind section"
+                                class="w-full h-full lg:rounded-l-2xl rounded-2xl bg-blend-multiply bg-indigo-700 object-cover" />
+                            <h1 class="font-manrope text-white text-4xl font-bold leading-10 absolute top-11 left-11">
+                                Contact us</h1>
+                            <div class="absolute bottom-0 w-full lg:p-11 p-5">
+                                <div class="bg-white rounded-lg p-6 block">
+                                    <a href="javascript:;" class="flex items-center mb-6">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.3092 18.3098C22.0157 18.198 21.8689 18.1421 21.7145 18.1287C21.56 18.1154 21.4058 18.1453 21.0975 18.205L17.8126 18.8416C17.4392 18.9139 17.2525 18.9501 17.0616 18.9206C16.8707 18.891 16.7141 18.8058 16.4008 18.6353C13.8644 17.2551 12.1853 15.6617 11.1192 13.3695C10.9964 13.1055 10.935 12.9735 10.9133 12.8017C10.8917 12.6298 10.9218 12.4684 10.982 12.1456L11.6196 8.72559C11.6759 8.42342 11.7041 8.27233 11.6908 8.12115C11.6775 7.96998 11.6234 7.82612 11.5153 7.5384L10.6314 5.18758C10.37 4.49217 10.2392 4.14447 9.95437 3.94723C9.6695 3.75 9.29804 3.75 8.5551 3.75H5.85778C4.58478 3.75 3.58264 4.8018 3.77336 6.06012C4.24735 9.20085 5.64674 14.8966 9.73544 18.9853C14.0295 23.2794 20.2151 25.1426 23.6187 25.884C24.9335 26.1696 26.0993 25.1448 26.0993 23.7985V21.2824C26.0993 20.5428 26.0993 20.173 25.9034 19.8888C25.7076 19.6046 25.362 19.4729 24.6708 19.2096L22.3092 18.3098Z"
+                                                stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <h5 class="text-black text-base font-normal leading-6 ml-5">470-601-1911</h5>
+                                    </a>
+                                    <a href="javascript:;" class="flex items-center mb-6">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.81501 8.75L10.1985 13.6191C12.8358 15.2015 14.1544 15.9927 15.6032 15.9582C17.0519 15.9237 18.3315 15.0707 20.8905 13.3647L27.185 8.75M12.5 25H17.5C22.214 25 24.5711 25 26.0355 23.5355C27.5 22.0711 27.5 19.714 27.5 15C27.5 10.286 27.5 7.92893 26.0355 6.46447C24.5711 5 22.214 5 17.5 5H12.5C7.78595 5 5.42893 5 3.96447 6.46447C2.5 7.92893 2.5 10.286 2.5 15C2.5 19.714 2.5 22.0711 3.96447 23.5355C5.42893 25 7.78595 25 12.5 25Z"
+                                                stroke="#4F46E5" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                        <h5 class="text-black text-base font-normal leading-6 ml-5">
+                                            Pagedone1234@gmail.com</h5>
+                                    </a>
+                                    <a href="javascript:;" class="flex items-center">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M25 12.9169C25 17.716 21.1939 21.5832 18.2779 24.9828C16.8385 26.6609 16.1188 27.5 15 27.5C13.8812 27.5 13.1615 26.6609 11.7221 24.9828C8.80612 21.5832 5 17.716 5 12.9169C5 10.1542 6.05357 7.5046 7.92893 5.55105C9.8043 3.59749 12.3478 2.5 15 2.5C17.6522 2.5 20.1957 3.59749 22.0711 5.55105C23.9464 7.5046 25 10.1542 25 12.9169Z"
+                                                stroke="#4F46E5" stroke-width="2" />
+                                            <path
+                                                d="M17.5 11.6148C17.5 13.0531 16.3807 14.219 15 14.219C13.6193 14.219 12.5 13.0531 12.5 11.6148C12.5 10.1765 13.6193 9.01058 15 9.01058C16.3807 9.01058 17.5 10.1765 17.5 11.6148Z"
+                                                stroke="#4F46E5" stroke-width="2" />
+                                        </svg>
+                                        <h5 class="text-black text-base font-normal leading-6 ml-5">654 Sycamore Avenue,
+                                            Meadowville, WA 76543</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-5 lg:p-11 lg:rounded-r-2xl rounded-2xl">
+                    <h2 class="text-indigo-600 font-manrope text-4xl font-semibold leading-10 mb-11">Send Us A Message
+                    </h2>
+                    <input type="text"
+                        class="w-full h-12 text-gray-600 placeholder-gray-400  shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
+                        placeholder="Name">
+                    <input type="text"
+                        class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
+                        placeholder="Email">
+                    <input type="text"
+                        class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
+                        placeholder="Phone">
+                    <div class="mb-10">
+                        <h4 class="text-gray-500 text-lg font-normal leading-7 mb-4">Preferred method of communication
+                        </h4>
+                        <div class="flex">
+                            <div class="flex items-center mr-11">
+                                <input id="radio-group-1" type="radio" name="radio-group"
+                                    class="hidden checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100">
+                                <label for="radio-group-1"
+                                    class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6">
+                                    <span class="border border-gray-300 rounded-full mr-2 w-4 h-4  ml-2 "></span> Email
+                                </label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="radio-group-2" type="radio" name="radio-group"
+                                    class="hidden checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100">
+                                <label for="radio-group-2"
+                                    class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6">
+                                    <span class="border border-gray-300  rounded-full mr-2 w-4 h-4  ml-2 "></span> Phone
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text"
+                        class="w-full h-12 text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
+                        placeholder="Message">
+                    <button
+                        class="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 hover:bg-indigo-800 bg-indigo-600 shadow-sm">Send</button>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- creating news bar -->
+
+    <div id="newsbar" class="text-center p-10 mt-20">
+        <div id="newsbar__para">
+            <p id="newsbar__para1" class="text-5xl font-extrabold p-4">Join our News Letter</p>
+            <p id="newsbar__para2" class="text-4xl">Signup for our email newspaper to get exclusive discounts, updates,
+                and more</p>
+        </div>
+
+        <div id="newsbar__searchbar" class="p-4">
+            <input style="border: solid black 3px ;width: 90%; height: 40px;">
+        </div>
+
+        <button id="newsbar__button" class="p-3 bg-gray-900 text-white text-xl rounded-md">Subscribe→</button>
+    </div>
+
+
+    <!-- creating end bar -->
+
+    <div id="endbar" class="bg-gray-900 text-white p-4">
+        <p id="endbar__para1" class="text-5xl font-extrabold p-4">Nostra</p>
+        <p id="endbar__para2" class="text-3xl p-4">The Standard chunk of Lorem ipsum used since the 1500s is reprodused
+            below for those
+            interest</p>
+        <div id="socialmedia__icons" class="flex gap-x-10 p-4">
+            <p id="insta"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    viewBox="0 0 448 512">
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.9 224.1 370.9 339 319.6 339 255.9 287.7 141 224.1 141zm0 186c-39.3 0-71.1-31.8-71.1-71.1S184.8 185.9 224.1 185.9s71.1 31.8 71.1 71.1-31.8 71.1-71.1 71.1zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.7-9.9-67.3-36.2-93.5S383.1 32 347.4 30.3c-35.7-1.7-142.8-1.7-178.5 0-35.7 1.7-67.3 9.9-93.5 36.2S32 128.9 30.3 164.6c-1.7 35.7-1.7 142.8 0 178.5 1.7 35.7 9.9 67.3 36.2 93.5s57.8 34.5 93.5 36.2c35.7 1.7 142.8 1.7 178.5 0 35.7-1.7 67.3-9.9 93.5-36.2s34.5-57.8 36.2-93.5c1.7-35.7 1.7-142.8 0-178.5zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.3-9s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.6 102.9-9 132.3z" />
+                </svg>
+            </p>
+
+            <p id="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    viewBox="0 0 512 512">
+                    <path d="M459.4 151.7c.3 4.5.3 9 .3 13.6 0 138.7-105.6 298.5-298.5 298.5-59.5 0-114.7-17.2-161.1-47.1 
+  8.4 1 16.8 1.5 25.6 1.5 49.1 0 94.2-16.8 130.3-45-46.1-1-84.8-31.2-98.1-72.8 
+  6.5 1 13 1.6 19.8 1.6 9.4 0 18.7-1.3 27.5-3.6-48.1-9.7-84.3-52.1-84.3-103 
+  0-.5 0-1 0-1.5 14.3 7.9 30.7 12.7 48.1 13.3-28.3-18.9-46.8-51-46.8-87.4 
+  0-19.2 5.2-37 14.3-52.4 51.9 63.7 129.3 105.3 216.4 109.8-1.8-7.7-2.8-15.7-2.8-24 
+  0-57.4 46.5-103.9 103.9-103.9 29.9 0 56.9 12.7 75.9 33.1 
+  23.7-4.5 46-13.3 66-25.2-7.8 24.4-24.4 44.9-46 57.9 
+  21.1-2.4 41.5-8.1 60.3-16.2-14 20.8-31.6 39.2-51.9 53.8z" />
+                </svg>
+            </p>
+
+            <p id="fb"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    viewBox="0 0 320 512">
+                    <path
+                        d="M279.14 288l14.22-92.66h-88.91V127.59c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S293.09 0 262.17 0c-73.1 0-121.17 44.38-121.17 124.72V195.3H89.09V288h51.91v224h100.17V288z" />
+                </svg>
+            </p>
+
+        </div>
+
+        <p id="endbar__para3" class="p-4 text-4xl ">@ 2023 Nostra.com</p>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

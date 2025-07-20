@@ -1,0 +1,506 @@
+
+body{
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Slider slide animation */
+#imagecontainer {
+  position: relative;
+  width: 95%;
+  height: 500px;
+  margin-left: 2.5%;
+  overflow: hidden;
+}
+
+#textcontainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+#textcontainer p, #textcontainer button {
+  pointer-events: auto;
+  z-index: 21;
+}
+#shopnowbutton {
+  z-index: 30 !important;
+  pointer-events: auto !important;
+}
+#imagecontainer > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: none;
+}
+
+.slide-in-left {
+  animation: slideInLeft 2s forwards;
+  animation-timing-function: ease-in-out;
+  z-index: 2;
+}
+.slide-in-right {
+  animation: slideInRight 2s forwards;
+  animation-timing-function: ease-in-out;
+  z-index: 2;
+}
+.slide-out-left {
+  animation: slideOutLeft 2s forwards;
+  animation-timing-function: ease-in-out;
+  z-index: 1;
+}
+.slide-out-right {
+  animation: slideOutRight 2s forwards;
+  animation-timing-function: ease-in-out;
+  z-index: 1;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0.7; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0.7; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideOutLeft {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-100%); opacity: 0.7; }
+}
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0.7; }
+}
+
+#brandlogo__title,#brandlogo__container,#customertitle,#boxes,#Newarrival__imagecontainer,#mostwanted__imagecontainer,#graybox{
+  animation-name: zoom;
+    animation-duration: 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.hartred{
+  color:red;
+}
+
+/* Offer bar animations */
+#offerbar {
+  animation: slideDownFade 0.8s ease-out;
+}
+
+#offerbar__content span {
+  animation: pulseGlow 2s infinite;
+  display: inline-block;
+}
+
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+
+
+/* Mobile Navigation Styles */
+.mobile-nav {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  height: 20px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Side Menu */
+.mobile-side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #1E232D;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-side-menu.active {
+  right: 0;
+}
+
+.mobile-menu-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-menu {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-list li {
+  margin-bottom: 20px;
+}
+
+.mobile-menu-item {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-menu-item:hover {
+  color: #ccc;
+}
+
+.mobile-menu-item.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+@media screen and (max-width:600px){
+  #offerbar__content,#close__icon,#offerbar{
+    font-size: x-small;
+    padding:0.1%;
+    
+  }
+
+  #navbar__s1__title{
+    font-size:large;
+  }
+  #navbar__s2{
+    display: none;
+  }
+
+  #imagecontainer{
+   
+  width: 95%; 
+  height: 150px; 
+  
+  }
+
+  /* Mobile: Fix image slider images to fit container */
+  #img1, #img2, #img3 {
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* Mobile: Image slider text and buttons - sized for 150px container */
+  #imagesliderpara1 {
+    font-size: 1.2rem !important;
+    margin-top: 35% !important;
+    margin-left: 25% !important;
+    padding: 5px !important;
+  }
+
+  #imagesliderpara2 {
+    font-size: 0.9rem !important;
+    margin-top: 40% !important;
+    margin-left: 35% !important;
+  }
+
+  /* Mobile: Slider navigation buttons */
+  #sliderbutton1, #sliderbutton2 {
+    font-size: 1.5rem !important;
+    margin-top: 40% !important;
+  }
+
+  #sliderbutton1 {
+    margin-left: 15% !important;
+  }
+
+  #sliderbutton2 {
+    margin-left: 85% !important;
+  }
+
+  /* Mobile: Shop now button */
+  #shopnowbutton {
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+    margin-left: 40% !important;
+    margin-top: 20% !important;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  #brandlogo__title{
+    font-size:x-large;
+    font-weight: bolder;
+  }
+
+ #brandlogo__container{
+  width: 95%;
+  height: 50px;
+ }
+ #pumatext,#adidastext,#simpletext,#leavestext,#behancetext,#twitchtext,#niketext{
+  font-size: x-small;
+  text-align: center;
+ }
+
+ #puma,#adidas,#simple,#leaves,#behance,#twitch,#nike{
+  width: 70%;
+  height: 60%;
+  margin-left: 15%;
+ }
+
+ #customer__title{
+  display: inline;
+ }
+
+ #customer__para1{
+  font-size: x-small;
+  margin-bottom: 5px !important;
+  padding-bottom: 0 !important;
+ }
+
+ #customer__para2{
+  font-size: xx-small;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-left: 0 !important;
+ }
+
+ #boxes{
+  font-size: 5px;
+ }
+
+ #box1para1,#box1para2,#box2para1,#box2para2,#box3para1,#box3para2,#box4para1,#box4para2{
+  padding:2%;
+ }
+ 
+ #box1img,#box2img,#box3img,#box4img{
+  font-size:medium;
+  padding: 2%;
+ }
+ #box1,#box2,#box3,#box4{
+  padding: 2%;
+ }
+
+ /* Mobile: Make New Arrival and Most Wanted images small like logos */
+ #newarrival__image1, #newarrival__image2, #newarrival__image3, #newarrival__image4,
+ #mostwanted__image1, #mostwanted__image2, #mostwanted__image3, #mostwanted__image4 {
+   width: 80px !important;
+   height: 80px !important;
+   margin: 5px !important;
+   border-radius: 10px;
+ }
+
+ /* Mobile: Center New Arrival and Most Wanted images */
+ #Newarrival__imagecontainer, #mostwanted__imagecontainer {
+   justify-content: center !important;
+   gap: 15px;
+   flex-wrap: wrap;
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ /* Mobile: Make Shop Now buttons smaller and suitable for small images */
+ #newarrival__image1 button, #newarrival__image2 button, #newarrival__image3 button, #newarrival__image4 button {
+   font-size: 5px !important;
+   padding: 0.1px 10px;
+   margin-left: 10% !important;
+   margin-top: 60% !important;
+   border-radius: 3px;
+ }
+
+ /* Mobile: Make Sale tags smaller and suitable for small images */
+ #mostwanted__image1 p, #mostwanted__image2 p, #mostwanted__image3 p, #mostwanted__image4 p {
+   font-size: 10px !important;
+   padding: 1px 3px !important;
+   border-radius: 2px;
+ }
+
+ /* Mobile: Make heart buttons smaller */
+ #mostwanted__image1 .hart1, #mostwanted__image2 .hart2, 
+ #mostwanted__image3 .hart3, #mostwanted__image4 .hart4 {
+   font-size: medium !important;
+   bottom: 2px !important;
+   right: 2px !important;
+ }
+
+ /* Mobile: Graybox styling - smaller and desktop-like */
+ #graybox {
+   padding: 15px !important;
+   margin-top: 20px !important;
+   flex-direction: column !important;
+   text-align: center;
+ }
+ 
+ #grayboximage img {
+   width: 150px !important;
+   height: auto;
+   margin: 0 auto 10px auto;
+ }
+ 
+ #grayboxpara1 {
+   font-size: 1.5rem !important;
+   padding: 5px !important;
+   margin: 5px 0 !important;
+ }
+ 
+ #grayboxpara2 {
+   font-size: 1rem !important;
+   margin: 5px 0 !important;
+ }
+ 
+ #graybox__shopnow--button {
+   font-size: 14px !important;
+   padding: 8px 12px !important;
+   margin: 10px auto 0 auto !important;
+ }
+
+ /* Mobile: News bar styling - smaller and desktop-like */
+ #newsbar {
+   padding: 20px 10px !important;
+   margin-top: 30px !important;
+ }
+ 
+ #newsbar__para1 {
+   font-size: 1.8rem !important;
+   padding: 10px !important;
+ }
+ 
+ #newsbar__para2 {
+   font-size: 1rem !important;
+   padding: 5px !important;
+ }
+ 
+ #newsbar__searchbar input {
+   width: 85% !important;
+   height: 35px !important;
+   font-size: 14px !important;
+ }
+ 
+ #newsbar__button {
+   font-size: 14px !important;
+   padding: 8px 12px !important;
+ }
+
+ /* Mobile: End bar styling - smaller and desktop-like */
+ #endbar {
+   padding: 15px !important;
+ }
+ 
+ #endbar__para1 {
+   font-size: 2rem !important;
+   padding: 10px !important;
+ }
+ 
+ #endbar__para2 {
+   font-size: 1rem !important;
+   padding: 10px !important;
+ }
+ 
+ #socialmedia__icons {
+   gap: 15px !important;
+   padding: 10px !important;
+   justify-content: center;
+ }
+ 
+ #socialmedia__icons svg {
+   width: 20px !important;
+   height: 20px !important;
+ }
+ 
+ #endbar__para3 {
+   font-size: 1.2rem !important;
+   padding: 10px !important;
+ }
+
+}
